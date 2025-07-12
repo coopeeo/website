@@ -1,6 +1,6 @@
-# website
+# Cooper's Website
 
-This template should help get you started developing with Vue 3 in Vite.
+This is my website!
 
 ## Recommended IDE Setup
 
