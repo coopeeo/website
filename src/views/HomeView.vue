@@ -25,7 +25,9 @@ import DogItem from '@/components/BentoBox/DogBentoBoxItem.vue'
     <div class="bento-item">More About Me</div>
     <div class="bento-item">More About Me</div>
     <div class="bento-item"><DogItem dog="giddy" /></div>
-    <div class="bento-item"><h1 class="dog-title">Meet the Dogs</h1></div>
+    <div class="bento-item">
+      <h1 class="dog-title">Meet the Dogs</h1>
+    </div>
     <div class="bento-item"><DogItem dog="orion" /></div>
     <div class="bento-item">Socials</div>
   </main>
@@ -58,7 +60,12 @@ main {
 }
 /* Meet the Dogs */
 .bento-item:nth-child(14) {
+  display: grid;
   grid-column: span 3;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
 }
 .bento-item:nth-child(13) {
   display: flex;
@@ -110,11 +117,10 @@ main {
   color: transparent;
   font-weight: bold;
   animation: gradientMove 6s linear infinite;
-  transition: animation-duration 0.3s ease;
+  transition: animation-duration 0.3s ease-in-out;
 }
 
 .dog-title {
-  display: inline-block;
   background: linear-gradient(
     45deg,
     #e4d374,
@@ -147,7 +153,17 @@ main {
   color: transparent;
   font-weight: bold;
   animation: dogGradientMove 6s ease-in-out infinite;
-  transition: animation-duration 0.3s ease;
+  transition: all 0.3s ease-in-out;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: clamp(1.5rem, 4vw, 3rem);
+  line-height: 1.2;
+  padding: 1rem;
+  width: 100%;
+  height: 100%;
 }
 
 .bento-item:hover > .intro > .name {
