@@ -1,5 +1,5 @@
 <script setup lang="ts">
-// omg hello world
+import DogItem from '@/components/BentoBox/DogBentoBoxItem.vue'
 </script>
 
 <template>
@@ -24,9 +24,9 @@
     <div class="bento-item">More About Me</div>
     <div class="bento-item">More About Me</div>
     <div class="bento-item">More About Me</div>
-    <div class="bento-item">Giddy</div>
-    <div class="bento-item">Meet the Dogs</div>
-    <div class="bento-item">Orion</div>
+    <div class="bento-item"><DogItem dog="giddy" /></div>
+    <div class="bento-item"><h1 class="dog-title">Meet the Dogs</h1></div>
+    <div class="bento-item"><DogItem dog="orion" /></div>
     <div class="bento-item">Socials</div>
   </main>
 </template>
@@ -60,6 +60,15 @@ main {
 .bento-item:nth-child(14) {
   grid-column: span 3;
 }
+.bento-item:nth-child(13) {
+  display: flex;
+  padding: 0;
+}
+.bento-item:nth-child(15) {
+  display: flex;
+  padding: 0;
+}
+/* Socials */
 .bento-item:nth-child(16) {
   grid-column: span 5;
 }
@@ -104,6 +113,43 @@ main {
   transition: animation-duration 0.3s ease;
 }
 
+.dog-title {
+  display: inline-block;
+  background: linear-gradient(
+    45deg,
+    #e4d374,
+    #dbcd79,
+    #dbd678,
+    #d4cd69,
+    #a1ac64,
+    #c8cf76,
+    #b6be56,
+    #c1c781,
+    #b5b989,
+    #ffffff,
+    #ffffff,
+    #919191,
+    #dbd9db,
+    #171718,
+    #171718,
+    #171718,
+    #1a1a1b,
+    #1a1a1b,
+    #3b3b3d,
+    #121213,
+    #121213,
+    #121213
+  );
+  background-size: 300% 300%;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  font-weight: bold;
+  animation: dogGradientMove 6s ease-in-out infinite;
+  transition: animation-duration 0.3s ease;
+}
+
 .bento-item:hover > .intro > .name {
   animation-duration: 3s;
 }
@@ -114,6 +160,21 @@ main {
   }
   100% {
     background-position: 300% 50%;
+  }
+}
+
+@keyframes dogGradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  55% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 </style>
