@@ -4,27 +4,64 @@
 
 <template>
   <main>
-    <div class="bento-item">testing</div>
+    <div class="bento-item">Music</div>
+    <div class="bento-item">Image</div>
+    <div class="bento-item">Games</div>
+    <div class="bento-item">Languages</div>
+    <div class="bento-item">Image</div>
     <div class="bento-item">
       <h1 class="intro">
         Hi, I'm
         <div class="name">Cooper</div>
       </h1>
       <div class="tagline">
-        I am your friendly person with wanting to be
-        <span>a decent developer</span>
+        I am your friendly person wanting to be <span>a decent developer</span>
       </div>
     </div>
-    <div class="bento-item">testing</div>
+    <div class="bento-item">Image</div>
+    <div class="bento-item">More About Me</div>
+    <div class="bento-item">More About Me</div>
+    <div class="bento-item">More About Me</div>
+    <div class="bento-item">More About Me</div>
+    <div class="bento-item">More About Me</div>
+    <div class="bento-item">Giddy</div>
+    <div class="bento-item">Meet the Dogs</div>
+    <div class="bento-item">Orion</div>
+    <div class="bento-item">Socials</div>
   </main>
 </template>
 
 <style scoped>
 main {
-  display: flex;
-  align-items: stretch;
+  display: grid;
   justify-content: center;
+  grid-template-columns: repeat(5, 20%);
+  grid-template-rows: repeat(4);
   color: #fff;
+}
+
+/* Name */
+.bento-item:nth-child(6) {
+  grid-column: 2 / span 3;
+}
+/* Music */
+.bento-item:nth-child(1) {
+  grid-column: span 2;
+}
+/* Games */
+.bento-item:nth-child(3) {
+  grid-column: span 2;
+}
+/* Languages */
+.bento-item:nth-child(4) {
+  grid-column: span 5;
+}
+/* Meet the Dogs */
+.bento-item:nth-child(14) {
+  grid-column: span 3;
+}
+.bento-item:nth-child(16) {
+  grid-column: span 5;
 }
 
 .bento-item {
