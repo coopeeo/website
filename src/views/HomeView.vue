@@ -137,7 +137,7 @@ main {
   user-select: none;
 }
 
-.bento-item:hover, .bento-item:focus {
+.bento-item:hover, .bento-item:active {
   transform: translateY(-2px);
   box-shadow:
     0 12px 35px rgba(0, 0, 0, 0.5),
@@ -204,7 +204,7 @@ main {
   height: 100%;
 }
 
-.bento-item:hover > .intro > .name, .bento-item:focus > .intro > .name {
+.bento-item:hover > .intro > .name, .bento-item:active > .intro > .name {
   animation-duration: 3s;
 }
 

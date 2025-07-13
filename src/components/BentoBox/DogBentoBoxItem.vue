@@ -98,12 +98,12 @@ const dogInfo: Record<Dog, DogInfo> = {
 }
 
 .dog-container:hover .dog-info,
-.dog-container:focus .dog-info {
+.dog-container:active .dog-info {
   transform: translateY(0);
 }
 
 .dog-container:hover .dog-image :deep(img),
-dog-container:focus .dog-image :deep(img) {
+.dog-container:active .dog-image :deep(img) {
   transform: scale(1.05);
 }
 
