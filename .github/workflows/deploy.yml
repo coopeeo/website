@@ -25,7 +25,7 @@ jobs:
         run: npm run build
 
       - name: Deploy build via SFTP
-        uses: wlixcc/SFTP-Deploy-Action@master
+        uses: wlixcc/SFTP-Deploy-Action@v1.2.6
         with:
           server: ${{ secrets.SFTP_HOST }}
           port: ${{ secrets.SFTP_PORT }}
@@ -34,4 +34,4 @@ jobs:
           local_path: './dist/*'
           remote_path: ${{ secrets.SFTP_REMOTE_PATH }}
           delete_remote_files: false
-          sftp_only: true
+          sftp_only: false
