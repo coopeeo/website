@@ -1,14 +1,25 @@
 <script setup lang="ts">
 import DogItem from '@/components/BentoBox/DogBentoBoxItem.vue'
+import CooperImageItem from '@/components/BentoBox/CooperImageBentoBoxItem.vue'
+import CarouselItem from '@/components/BentoBox/CarouselBentoBoxItem.vue'
 </script>
 
 <template>
   <main>
-    <div class="bento-item">Music</div>
-    <div class="bento-item">Image</div>
-    <div class="bento-item">Games</div>
-    <div class="bento-item">Languages</div>
-    <div class="bento-item">Image</div>
+    <div class="bento-item">
+      <h3>Music</h3>
+      <CarouselItem />
+    </div>
+    <div class="bento-item image"><CooperImageItem img="top" /></div>
+    <div class="bento-item">
+      <h3>Games</h3>
+      <CarouselItem />
+    </div>
+    <div class="bento-item">
+      <h3>Languages</h3>
+      <CarouselItem />
+    </div>
+    <div class="bento-item image"><CooperImageItem img="nameleft" /></div>
     <div class="bento-item">
       <h1 class="intro">
         Hi, I'm
@@ -18,16 +29,14 @@ import DogItem from '@/components/BentoBox/DogBentoBoxItem.vue'
         I am your friendly person wanting to be <span>a decent developer</span>
       </div>
     </div>
-    <div class="bento-item">Image</div>
+    <div class="bento-item image"><CooperImageItem img="nameright" /></div>
     <div class="bento-item">More About Me</div>
     <div class="bento-item">More About Me</div>
     <div class="bento-item">More About Me</div>
     <div class="bento-item">More About Me</div>
     <div class="bento-item">More About Me</div>
     <div class="bento-item"><DogItem dog="giddy" /></div>
-    <div class="bento-item">
-      <h1 class="dog-title">Meet the Dogs</h1>
-    </div>
+    <div class="bento-item"><h1 class="dog-title">Meet the Dogs</h1></div>
     <div class="bento-item"><DogItem dog="orion" /></div>
     <div class="bento-item">Socials</div>
   </main>
@@ -44,7 +53,13 @@ main {
 
 /* Name */
 .bento-item:nth-child(6) {
-  grid-column: 2 / span 3;
+  display: grid;
+  grid-column: span 3;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  justify-items: center;
+  gap: 0px;
 }
 /* Music */
 .bento-item:nth-child(1) {
@@ -78,6 +93,11 @@ main {
 /* Socials */
 .bento-item:nth-child(16) {
   grid-column: span 5;
+}
+
+/* Images of Cooper */
+.bento-item.image {
+  padding: 0;
 }
 
 .bento-item {
