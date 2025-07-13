@@ -11,11 +11,12 @@ type DogInfo = {
   // Pronouns are optional, but can be included for more personalization
   // If you want to add pronouns, you can use the following type:
   pronouns?: 'he/him' | 'she/her' | 'they/them' | 'any' | 'non-binary'
-  image?: string
+  image: OptimizedImage
 }
 
-import GiddyPhoto from '@/assets/dogs/giddy.jpeg'
-import OrionPhoto from '@/assets/dogs/orion.jpeg'
+import GiddyPhoto from '@/assets/dogs/giddy.jpeg?optimized'
+import OrionPhoto from '@/assets/dogs/orion.jpeg?optimized'
+import PictureItem, { type OptimizedImage } from '../PictureItem.vue'
 
 const dogInfo: Record<Dog, DogInfo> = {
   giddy: {
@@ -37,7 +38,11 @@ const dogInfo: Record<Dog, DogInfo> = {
 
 <template>
   <div class="dog-container">
-    <img :src="dogInfo[dog].image" alt="Image of {{ dogInfo[dog].name }}" class="dog-image" />
+    <PictureItem
+      :src="dogInfo[dog].image"
+      alt="Image of {{ dogInfo[dog].name }}"
+      class="dog-image"
+    />
     <div class="dog-info">
       <h3 class="name">{{ dogInfo[dog].name }}</h3>
       <div class="age">

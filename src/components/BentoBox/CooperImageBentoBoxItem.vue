@@ -5,12 +5,6 @@ defineProps<{
 
 type CooperImage = 'top' | 'nameleft' | 'nameright'
 
-type OptimizedImage = {
-  webp?: string
-  avif?: string
-  fallback: string
-}
-
 type CooperImageInfo = {
   image: OptimizedImage
   alt: string
@@ -19,6 +13,7 @@ type CooperImageInfo = {
 import TopPhoto from '@/assets/me/top.jpeg?optimized'
 import NameLeftPhoto from '@/assets/me/nameleft.jpeg?optimized'
 import NameRightPhoto from '@/assets/me/nameright.jpeg?optimized'
+import Picture, { type OptimizedImage } from '@/components/PictureItem.vue'
 
 const images: Record<CooperImage, CooperImageInfo> = {
   top: {
@@ -38,17 +33,13 @@ const images: Record<CooperImage, CooperImageInfo> = {
 
 <template>
   <div class="cooper-image-container" :title="images[img].alt">
-    <picture>
-      <source v-if="images[img].image.avif" :srcset="images[img].image.avif" type="image/avif" />
-      <source v-if="images[img].image.webp" :srcset="images[img].image.webp" type="image/webp" />
-      <img
-        :src="images[img].image.fallback"
-        :title="images[img].alt"
-        :alt="images[img].alt"
-        class="cooper-image"
-        loading="lazy"
-      />
-    </picture>
+    <Picture
+      :src="images[img].image"
+      :alt="images[img].alt"
+      :title="images[img].alt"
+      class="cooper-image"
+      loading="lazy"
+    />
   </div>
 </template>
 
