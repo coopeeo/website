@@ -8,6 +8,9 @@ type DogInfo = {
   name: string
   born: Date
   breed: string
+  // Pronouns are optional, but can be included for more personalization
+  // If you want to add pronouns, you can use the following type:
+  pronouns?: 'he/him' | 'she/her' | 'they/them' | 'any' | 'non-binary'
   image?: string
 }
 
@@ -19,12 +22,14 @@ const dogInfo: Record<Dog, DogInfo> = {
     name: 'Giddy',
     born: new Date('2022-03-28'),
     breed: 'Golden Doodle',
+    pronouns: 'she/her',
     image: GiddyPhoto,
   },
   orion: {
     name: 'Orion',
     born: new Date('2018-10-11'),
     breed: 'Standard Poodle',
+    pronouns: 'he/him',
     image: OrionPhoto,
   },
 }
@@ -44,6 +49,7 @@ const dogInfo: Record<Dog, DogInfo> = {
         {{ dogInfo[dog].born.getFullYear() === new Date().getFullYear() ? 'year' : 'years' }} old
       </div>
       <div class="breed">{{ dogInfo[dog].breed }}</div>
+      <div v-if="dogInfo[dog].pronouns" class="pronouns">{{ dogInfo[dog].pronouns }}</div>
     </div>
   </div>
 </template>
@@ -98,7 +104,7 @@ const dogInfo: Record<Dog, DogInfo> = {
 }
 
 .age,
-.breed {
+.breed .pronouns {
   margin: 0.2em 0;
   opacity: 0.9;
 }
