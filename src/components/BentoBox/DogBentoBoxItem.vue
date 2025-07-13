@@ -24,7 +24,7 @@ const dogInfo: Record<Dog, DogInfo> = {
   orion: {
     name: 'Orion',
     born: new Date('2018-10-11'),
-    breed: 'Poodle',
+    breed: 'Standard Poodle',
     image: OrionPhoto,
   },
 }
