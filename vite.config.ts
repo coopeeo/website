@@ -42,7 +42,7 @@ export default defineConfig({
     // Enable CSS code splitting
     cssCodeSplit: true,
     // Production optimizations
-    minify: 'terser',
+    minify: 'esbuild', // Use esbuild for faster minification
     // Optimize source maps for production
     sourcemap: false, // Set to true if you need source maps in production
   },
