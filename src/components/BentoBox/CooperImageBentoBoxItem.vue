@@ -31,16 +31,30 @@ const images: Record<CooperImage, CooperImageInfo> = {
 </script>
 
 <template>
-  <img :src="images[img].image" :title="images[img].alt" :alt="images[img].alt" class="dog-image" />
+  <div class="cooper-image-container" :title="images[img].alt">
+    <img
+      :src="images[img].image"
+      :title="images[img].alt"
+      :alt="images[img].alt"
+      class="cooper-image"
+    />
+  </div>
 </template>
 
 <style scoped>
-.dog-image {
+.cooper-image-container {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  overflow: hidden;
+  border-radius: inherit;
+}
+.cooper-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   overflow: hidden;
   border-radius: inherit;
   transition: transform 0.3s ease;
+  pointer-events: none;
 }
 </style>

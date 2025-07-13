@@ -11,8 +11,8 @@ type DogInfo = {
   image?: string
 }
 
-import GiddyPhoto from '@/assets/dogs/giddy.jpeg?inline'
-import OrionPhoto from '@/assets/dogs/orion.jpeg?inline'
+import GiddyPhoto from '@/assets/dogs/giddy.jpeg'
+import OrionPhoto from '@/assets/dogs/orion.jpeg'
 
 const dogInfo: Record<Dog, DogInfo> = {
   giddy: {
@@ -63,6 +63,7 @@ const dogInfo: Record<Dog, DogInfo> = {
   object-fit: cover;
   border-radius: inherit;
   transition: transform 0.3s ease;
+  pointer-events: none;
 }
 
 .dog-info {

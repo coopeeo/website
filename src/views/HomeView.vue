@@ -1,23 +1,22 @@
 <script setup lang="ts">
 import DogItem from '@/components/BentoBox/DogBentoBoxItem.vue'
 import CooperImageItem from '@/components/BentoBox/CooperImageBentoBoxItem.vue'
-import CarouselItem from '@/components/BentoBox/CarouselBentoBoxItem.vue'
 </script>
 
 <template>
   <main>
     <div class="bento-item">
       <h3>Music</h3>
-      <CarouselItem />
+      <div>Hatsune Miku, Kendrick Lamar, Chappel Roan, Sabrina Carpenter</div>
     </div>
     <div class="bento-item image"><CooperImageItem img="top" /></div>
     <div class="bento-item">
       <h3>Games</h3>
-      <CarouselItem />
+      <div>Minecraft, Cult of the Lamb, Roblox, Balatro, Portal, Garry's Mod</div>
     </div>
     <div class="bento-item">
       <h3>Languages</h3>
-      <CarouselItem />
+      <div>JavaScript, TypeScript, Python, C++, C, Vue (what this website is made in!), Lua</div>
     </div>
     <div class="bento-item image"><CooperImageItem img="nameleft" /></div>
     <div class="bento-item">
@@ -30,15 +29,23 @@ import CarouselItem from '@/components/BentoBox/CarouselBentoBoxItem.vue'
       </div>
     </div>
     <div class="bento-item image"><CooperImageItem img="nameright" /></div>
-    <div class="bento-item">More About Me</div>
-    <div class="bento-item">More About Me</div>
-    <div class="bento-item">More About Me</div>
-    <div class="bento-item">More About Me</div>
-    <div class="bento-item">More About Me</div>
+    <div class="bento-item">
+      he/they/any<br />Questioning<br />Non Binary<br />Transgender? (if you count non-binary as
+      transitioning.)
+    </div>
+    <div class="bento-item">
+      I have ADHD (the inattentive and hyperactive types), Autism (Not Sure, TBD when getting
+      tested). I also have a great mother and father who take care of me, as well as a great nana
+      (grandmother). I also have an amazing brother with ADHD and albinism (the kind that includes
+      vision issues).
+    </div>
     <div class="bento-item"><DogItem dog="giddy" /></div>
     <div class="bento-item"><h1 class="dog-title">Meet the Dogs</h1></div>
     <div class="bento-item"><DogItem dog="orion" /></div>
-    <div class="bento-item">Socials</div>
+    <div class="bento-item">
+      Socials
+      <div>@coopeeo anywhere<br />Twitter: coop_eeo<br />Bluesky: @coopeeo.xyz</div>
+    </div>
   </main>
 </template>
 
@@ -74,7 +81,7 @@ main {
   grid-column: span 5;
 }
 /* Meet the Dogs */
-.bento-item:nth-child(14) {
+.bento-item:nth-child(11) {
   display: grid;
   grid-column: span 3;
   align-items: center;
@@ -82,17 +89,27 @@ main {
   justify-content: center;
   justify-items: center;
 }
-.bento-item:nth-child(13) {
+
+/* More About Me */
+.bento-item:nth-child(8) {
+  grid-column: span 2;
+}
+.bento-item:nth-child(9) {
+  grid-column: span 3;
+}
+
+.bento-item:nth-child(10) {
   display: flex;
   padding: 0;
 }
-.bento-item:nth-child(15) {
+.bento-item:nth-child(12) {
   display: flex;
   padding: 0;
 }
 /* Socials */
-.bento-item:nth-child(16) {
+.bento-item:nth-child(13) {
   grid-column: span 5;
+  user-select: none;
 }
 
 /* Images of Cooper */
@@ -117,6 +134,7 @@ main {
   transition:
     transform 0.2s ease,
     box-shadow 0.2s ease;
+  user-select: none;
 }
 
 .bento-item:hover {
