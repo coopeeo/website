@@ -76,6 +76,9 @@ const dogInfo: Record<Dog, DogInfo> = {
   transition: transform 0.3s ease;
   pointer-events: none;
 }
+.dog-image :deep(img) {
+  transition: transform 0.3s ease;
+}
 
 .dog-info {
   position: absolute;
@@ -98,7 +101,7 @@ const dogInfo: Record<Dog, DogInfo> = {
   transform: translateY(0);
 }
 
-.dog-container:hover .dog-image {
+.dog-container:hover .dog-image :deep(img) {
   transform: scale(1.05);
 }
 
