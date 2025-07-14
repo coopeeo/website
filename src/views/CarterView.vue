@@ -66,15 +66,6 @@ main {
 .bento-item:nth-child(4) {
   grid-column: span 5;
 }
-/* Meet the Dogs */
-.bento-item:nth-child(11) {
-  display: grid;
-  grid-column: span 3;
-  align-items: center;
-  text-align: center;
-  justify-content: center;
-  justify-items: center;
-}
 
 /* More About Me */
 .bento-item:nth-child(8) {
@@ -83,17 +74,8 @@ main {
 .bento-item:nth-child(9) {
   grid-column: span 3;
 }
-
-.bento-item:nth-child(10) {
-  display: flex;
-  padding: 0;
-}
-.bento-item:nth-child(12) {
-  display: flex;
-  padding: 0;
-}
 /* Socials */
-.bento-item:nth-child(13) {
+.bento-item:nth-child(10) {
   grid-column: span 5;
   user-select: none;
 }
