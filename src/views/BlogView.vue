@@ -5,10 +5,12 @@ import posts from '@/assets/blog/posts.json'
   <main>
     <h1>Blog</h1>
     <div class="posts-container">
-      <div v-for="post in posts.posts" :key="post.title">
-        <h2>{{ post.title }}</h2>
-        <p>{{ new Date(post.date).toLocaleDateString() }}</p>
-      </div>
+      <RouterLink v-for="(post, index) in posts.posts" :key="post.title" :to="`/blog/${index + 1}`">
+        <div>
+          <h2>{{ post.title }}</h2>
+          <p>{{ new Date(post.date).toLocaleDateString() }}</p>
+        </div>
+      </RouterLink>
     </div>
   </main>
 </template>
@@ -29,20 +31,20 @@ main {
   width: 100%;
 }
 
-.posts-container > div {
+.posts-container > a {
   background: rgba(255, 255, 255, 0.1);
   padding: 20px;
   border-radius: 8px;
   transition: background-color 0.3s ease;
 }
-.posts-container > div:hover {
+.posts-container > a:hover {
   background: rgba(255, 255, 255, 0.2);
 }
-.posts-container > div h2 {
+.posts-container > a h2 {
   margin: 0;
   font-size: 1.5em;
 }
-.posts-container > div p {
+.posts-container > a p {
   margin: 0.5em 0 0;
   font-size: 0.9em;
   color: #ccc;
