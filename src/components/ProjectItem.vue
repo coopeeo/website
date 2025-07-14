@@ -14,7 +14,7 @@ export type ProjectItemProps = {
   <div class="project-item">
     <h2>{{ props.title }}</h2>
     <p>{{ props.description }}</p>
-    <a :href="props.url" target="_blank">View Project</a>
+    <a :href="props.url" target="_blank">View Source</a>
   </div>
 </template>
 
