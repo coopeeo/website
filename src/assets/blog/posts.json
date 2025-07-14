@@ -1,0 +1,10 @@
+{
+  "$schema": "./posts.schema.json",
+  "posts": [
+    {
+      "title": "My Website",
+      "date": "2025-07-14T12:00:00Z",
+      "content": "I added a blog section to my website. Also this is a test post. But welcome to my new website, I am working hard on it yeah lmao okay bye."
+    }
+  ]
+}

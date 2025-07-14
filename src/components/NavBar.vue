@@ -1,13 +1,35 @@
 <script setup lang="ts">
-import router from '@/router';
-const routes = router.getRoutes();
+import { computed } from 'vue'
+import { useRouter, useRoute } from 'vue-router'
+
+const router = useRouter()
+const route = useRoute()
+
+const navRoutes = computed(() => {
+  return router.getRoutes().filter((route) => {
+    if (route.path.includes(':')) return false
+    if (!route.name) return false
+    if (route.path.split('/').length > 2) return false
+
+    return true
+  })
+})
+
+const isActiveRoute = (routePath: string) => {
+  if (routePath === '/') {
+    return route.path === '/'
+  }
+  return route.path.startsWith(routePath)
+}
 </script>
 
 <template>
   <nav>
-      <div v-for="route in routes" :key="route.path">
-        <RouterLink :class="{'is-active': route.path === router.currentRoute.value.path}" :to="route.path">{{ route.name }}</RouterLink>
-      </div>
+    <div v-for="navRoute in navRoutes" :key="navRoute.path">
+      <RouterLink :class="{ 'is-active': isActiveRoute(navRoute.path) }" :to="navRoute.path">
+        {{ navRoute.name }}
+      </RouterLink>
+    </div>
   </nav>
 </template>
 

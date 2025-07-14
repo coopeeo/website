@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "The title of the blog post"
+    },
+    "date": {
+      "type": "string",
+      "format": "date-time",
+      "description": "The date when the blog post was published"
+    },
+    "content": {
+      "type": "string",
+      "description": "The HTML content of the blog post"
+    }
+  },
+  "required": ["title", "date", "content"],
+  "additionalProperties": false,
+  "title": "Blog Post Schema",
+  "description": "Schema for a blog post in the website's blog section"
+}

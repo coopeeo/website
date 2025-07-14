@@ -21,12 +21,8 @@ export default defineConfig({
       output: {
         // Create separate chunks for better caching strategy
         manualChunks: {
-          // Vue core libraries - changes rarely
           'vue-vendor': ['vue', 'vue-router'],
-          // State management - changes rarely
           'store-vendor': ['pinia'],
-          // Large third-party libraries (add as you install them)
-          // 'ui-vendor': ['@headlessui/vue', 'lucide-vue-next'], // example
         },
         // Optimize chunk file naming for caching
         chunkFileNames: (chunkInfo) => {
