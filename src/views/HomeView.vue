@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import DogItem from '@/components/BentoBox/DogBentoBoxItem.vue'
 import CooperImageItem from '@/components/BentoBox/CooperImageBentoBoxItem.vue'
+import CooperSocials from '@/components/BentoBox/CooperSocials.vue'
 </script>
 
 <template>
@@ -42,10 +43,7 @@ import CooperImageItem from '@/components/BentoBox/CooperImageBentoBoxItem.vue'
     <div class="bento-item dog"><DogItem dog="giddy" /></div>
     <div class="bento-item dogs-title"><h1 class="dog-title">Meet the Dogs</h1></div>
     <div class="bento-item dog"><DogItem dog="orion" /></div>
-    <div class="bento-item socials">
-      Socials
-      <div>@coopeeo anywhere<br />Twitter: coop_eeo<br />Bluesky: @coopeeo.xyz</div>
-    </div>
+    <div class="bento-item socials"><CooperSocials /></div>
   </main>
 </template>
 
@@ -104,6 +102,7 @@ main {
 }
 /* Socials */
 .bento-item.socials {
+  padding: 0;
   grid-column: span 5;
   user-select: none;
 }
