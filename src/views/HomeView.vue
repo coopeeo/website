@@ -5,21 +5,21 @@ import CooperImageItem from '@/components/BentoBox/CooperImageBentoBoxItem.vue'
 
 <template>
   <main>
-    <div class="bento-item">
+    <div class="bento-item music">
       <h3>Music</h3>
       <div>Hatsune Miku, Kendrick Lamar, Chappel Roan, Sabrina Carpenter</div>
     </div>
     <div class="bento-item image"><CooperImageItem img="top" /></div>
-    <div class="bento-item">
+    <div class="bento-item games">
       <h3>Games</h3>
       <div>Minecraft, Cult of the Lamb, Roblox, Balatro, Portal, Garry's Mod</div>
     </div>
-    <div class="bento-item">
+    <div class="bento-item languages">
       <h3>Languages</h3>
       <div>JavaScript, TypeScript, Python, C++, C, Vue (what this website is made in!), Lua</div>
     </div>
     <div class="bento-item image"><CooperImageItem img="nameleft" /></div>
-    <div class="bento-item">
+    <div class="bento-item introduction">
       <h1 class="intro">
         Hi, I'm
         <div class="name">Cooper</div>
@@ -29,20 +29,20 @@ import CooperImageItem from '@/components/BentoBox/CooperImageBentoBoxItem.vue'
       </div>
     </div>
     <div class="bento-item image"><CooperImageItem img="nameright" /></div>
-    <div class="bento-item">
+    <div class="bento-item pronouns">
       he/they/any<br />Questioning<br />Non Binary<br />Transgender? (if you count non-binary as
       transitioning.)
     </div>
-    <div class="bento-item">
+    <div class="bento-item more-about-me">
       I have ADHD (the inattentive and hyperactive types), Autism (Not Sure, TBD when getting
       tested). I also have a great mother and father who take care of me, as well as a great nana
       (grandmother). I also have an amazing brother with ADHD and albinism (the kind that includes
       vision issues).
     </div>
-    <div class="bento-item"><DogItem dog="giddy" /></div>
-    <div class="bento-item"><h1 class="dog-title">Meet the Dogs</h1></div>
-    <div class="bento-item"><DogItem dog="orion" /></div>
-    <div class="bento-item">
+    <div class="bento-item dog"><DogItem dog="giddy" /></div>
+    <div class="bento-item dogs-title"><h1 class="dog-title">Meet the Dogs</h1></div>
+    <div class="bento-item dog"><DogItem dog="orion" /></div>
+    <div class="bento-item socials">
       Socials
       <div>@coopeeo anywhere<br />Twitter: coop_eeo<br />Bluesky: @coopeeo.xyz</div>
     </div>
@@ -59,7 +59,7 @@ main {
 }
 
 /* Name */
-.bento-item:nth-child(6) {
+.bento-item.introduction {
   display: grid;
   grid-column: span 3;
   align-items: center;
@@ -69,19 +69,19 @@ main {
   gap: 0px;
 }
 /* Music */
-.bento-item:nth-child(1) {
+.bento-item.music {
   grid-column: span 2;
 }
 /* Games */
-.bento-item:nth-child(3) {
+.bento-item.games {
   grid-column: span 2;
 }
 /* Languages */
-.bento-item:nth-child(4) {
+.bento-item.languages {
   grid-column: span 5;
 }
 /* Meet the Dogs */
-.bento-item:nth-child(11) {
+.bento-item.dogs-title {
   display: grid;
   grid-column: span 3;
   align-items: center;
@@ -91,23 +91,19 @@ main {
 }
 
 /* More About Me */
-.bento-item:nth-child(8) {
+.bento-item.pronouns {
   grid-column: span 2;
 }
-.bento-item:nth-child(9) {
+.bento-item.more-about-me {
   grid-column: span 3;
 }
 
-.bento-item:nth-child(10) {
-  display: flex;
-  padding: 0;
-}
-.bento-item:nth-child(12) {
+.bento-item.dog {
   display: flex;
   padding: 0;
 }
 /* Socials */
-.bento-item:nth-child(13) {
+.bento-item.socials {
   grid-column: span 5;
   user-select: none;
 }
@@ -137,7 +133,8 @@ main {
   user-select: none;
 }
 
-.bento-item:hover, .bento-item:active {
+.bento-item:hover,
+.bento-item:active {
   transform: translateY(-2px);
   box-shadow:
     0 12px 35px rgba(0, 0, 0, 0.5),
@@ -204,7 +201,8 @@ main {
   height: 100%;
 }
 
-.bento-item:hover > .intro > .name, .bento-item:active > .intro > .name {
+.bento-item:hover > .intro > .name,
+.bento-item:active > .intro > .name {
   animation-duration: 3s;
 }
 
