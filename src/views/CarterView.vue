@@ -2,33 +2,33 @@
 
 <template>
   <main>
-    <div class="bento-item">
+    <div class="bento-item music">
       <h3>Music</h3>
       <div>Meme songs</div>
     </div>
     <div class="bento-item image">Stuff</div>
-    <div class="bento-item">
+    <div class="bento-item games">
       <h3>Games</h3>
       <div>Roblox, Minecraft, Mobile Games, Geometry Dash</div>
     </div>
-    <div class="bento-item">
+    <div class="bento-item languages">
       <h3>Languages</h3>
       <div>English</div>
     </div>
     <div class="bento-item image">Carter</div>
-    <div class="bento-item">
+    <div class="bento-item introduction">
       <h1 class="intro">
         Hi, I'm
         <div class="name">Carter</div>
       </h1>
-      <div class="tagline">I am your friendly person with albimism</div>
+      <div class="tagline">I am your friendly person with albinism</div>
     </div>
     <div class="bento-item image">Carter</div>
-    <div class="bento-item">he/him</div>
-    <div class="bento-item">
+    <div class="bento-item pronouns">he/him</div>
+    <div class="bento-item more-about-me">
       I have ADHD and Albinism, I am also addicted to video games and youtube
     </div>
-    <div class="bento-item">
+    <div class="bento-item socials">
       Socials
       <div>CarCar, Cart_O</div>
     </div>
@@ -45,7 +45,7 @@ main {
 }
 
 /* Name */
-.bento-item:nth-child(6) {
+.bento-item.introduction {
   display: grid;
   grid-column: span 3;
   align-items: center;
@@ -55,32 +55,32 @@ main {
   gap: 0px;
 }
 /* Music */
-.bento-item:nth-child(1) {
+.bento-item.music {
   grid-column: span 2;
 }
 /* Games */
-.bento-item:nth-child(3) {
+.bento-item.games {
   grid-column: span 2;
 }
 /* Languages */
-.bento-item:nth-child(4) {
+.bento-item.languages {
   grid-column: span 5;
 }
 
 /* More About Me */
-.bento-item:nth-child(8) {
+.bento-item.pronouns {
   grid-column: span 2;
 }
-.bento-item:nth-child(9) {
+.bento-item.more-about-me {
   grid-column: span 3;
 }
 /* Socials */
-.bento-item:nth-child(10) {
+.bento-item.socials {
   grid-column: span 5;
   user-select: none;
 }
 
-/* Images of Cooper */
+/* Images of Carter */
 .bento-item.image {
   padding: 0;
 }
@@ -127,52 +127,6 @@ main {
   transition: animation-duration 0.3s ease-in-out;
 }
 
-.dog-title {
-  background: linear-gradient(
-    45deg,
-    #e4d374,
-    #dbcd79,
-    #dbd678,
-    #d4cd69,
-    #a1ac64,
-    #c8cf76,
-    #b6be56,
-    #c1c781,
-    #b5b989,
-    #ffffff,
-    #ffffff,
-    #919191,
-    #dbd9db,
-    #171718,
-    #171718,
-    #171718,
-    #1a1a1b,
-    #1a1a1b,
-    #3b3b3d,
-    #121213,
-    #121213,
-    #121213
-  );
-  background-size: 300% 300%;
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  color: transparent;
-  font-weight: bold;
-  animation: dogGradientMove 6s ease-in-out infinite;
-  transition: all 0.3s ease-in-out;
-  margin: 0;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  font-size: clamp(1.5rem, 4vw, 3rem);
-  line-height: 1.2;
-  padding: 1rem;
-  width: 100%;
-  height: 100%;
-}
-
 .bento-item:hover > .intro > .name,
 .bento-item:active > .intro > .name {
   animation-duration: 3s;
@@ -184,21 +138,6 @@ main {
   }
   100% {
     background-position: 300% 50%;
-  }
-}
-
-@keyframes dogGradientMove {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  55% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
   }
 }
 </style>
