@@ -33,17 +33,22 @@ const isActiveRoute = (routePath: string) => {
   </nav>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@use '@catppuccin/palette/scss/mocha';
+
 nav {
   display: flex;
   gap: 1rem;
 }
 nav a {
   text-decoration: none;
-  color: #fff;
+  transition:
+    color 0.4s ease,
+    font-weight 0.4s ease;
+  color: mocha.$text;
 }
 nav a.is-active {
-  color: #958;
+  color: mocha.$rosewater;
   font-weight: bold;
 }
 </style>

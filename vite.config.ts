@@ -42,7 +42,7 @@ export default defineConfig({
     // Optimize source maps for production
     sourcemap: false, // Set to true if you need source maps in production
   },
-  // Optimize dependencies pre-bundling
+
   optimizeDeps: {
     include: ['vue', 'vue-router', 'pinia'],
   },

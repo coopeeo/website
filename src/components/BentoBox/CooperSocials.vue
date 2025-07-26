@@ -12,16 +12,21 @@ const socials = ref([
   <div class="socials-container">
     <h3>Socials</h3>
     <div class="socials">coopeeo</div>
-    <div>
+    <div class="credits">
       Credit for the socials idea: <a target="_blank" href="https://pa.nley.contact">Panley</a>
     </div>
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@use '@catppuccin/palette/scss/mocha';
+
 .socials {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+.credits {
+  font-size: 0.875rem;
 }
 </style>

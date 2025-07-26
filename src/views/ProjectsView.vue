@@ -31,12 +31,14 @@ const projects: ProjectItemProps[] = [
   </main>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@use '@catppuccin/palette/scss/mocha';
+
 main {
   padding: 2rem;
   display: grid;
   grid-template-columns: repeat(3, minmax(300px, 1fr));
   gap: 1rem;
-  color: #fff;
+  color: mocha.$text;
 }
 </style>

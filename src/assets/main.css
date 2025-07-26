@@ -1,4 +1,4 @@
-@import './base.css';
+@import '@catppuccin/palette/style';
 
 #app {
   max-width: 1280px;

@@ -8,6 +8,8 @@ export type ProjectItemProps = {
   description: string
   url: string
 }
+
+// here so ide highlighting works
 </script>
 
 <template>
@@ -18,14 +20,19 @@ export type ProjectItemProps = {
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@use '@catppuccin/palette/scss/mocha';
+
 .project-item {
-  background: #222;
+  background: mocha.$base;
   border-radius: 8px;
   padding: 1rem;
   transition: transform 0.2s;
+  color: mocha.$text;
 }
-
+.project-item a {
+  color: mocha.$blue;
+}
 .project-item:hover {
   transform: translateY(-4px);
 }

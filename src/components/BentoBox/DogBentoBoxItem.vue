@@ -59,7 +59,9 @@ const dogInfo: Record<Dog, DogInfo> = {
   </div>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@use '@catppuccin/palette/scss/mocha';
+
 .dog-container {
   position: relative;
   width: 100%;
@@ -85,7 +87,7 @@ const dogInfo: Record<Dog, DogInfo> = {
   bottom: 0;
   left: 0;
   right: 0;
-  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  background: linear-gradient(transparent, mocha.$mantle);
   color: white;
   padding: 1.5em 1em 1em;
   transform: translateY(100%);

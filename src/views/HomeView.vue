@@ -47,7 +47,9 @@ import CooperSocials from '@/components/BentoBox/CooperSocials.vue'
   </main>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@use '@catppuccin/palette/scss/mocha';
+
 main {
   display: grid;
   justify-content: center;
@@ -113,15 +115,16 @@ main {
 }
 
 .bento-item {
+  color: mocha.$text;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   padding: 2rem;
-  background: #222;
+  background: mocha.$base;
   border-radius: 14px;
   margin: 0.3rem;
-  border: 0.1vh solid #000;
+  border: 0.1vh solid mocha.$mantle;
   box-shadow:
     0 8px 25px rgba(0, 0, 0, 0.4),
     0 4px 12px rgba(0, 0, 0, 0.3),

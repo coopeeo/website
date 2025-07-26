@@ -15,12 +15,14 @@ import posts from '@/assets/blog/posts.json'
   </main>
 </template>
 
-<style scoped>
+<style lang="scss" scoped>
+@use '@catppuccin/palette/scss/mocha';
+
 main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #fff;
+  color: mocha.$text;
 }
 .posts-container {
   display: grid;
@@ -32,13 +34,13 @@ main {
 }
 
 .posts-container > a {
-  background: rgba(255, 255, 255, 0.1);
+  background: mocha.$base;
   padding: 20px;
   border-radius: 8px;
   transition: background-color 0.3s ease;
 }
 .posts-container > a:hover {
-  background: rgba(255, 255, 255, 0.2);
+  background: mocha.$mantle;
 }
 .posts-container > a h2 {
   margin: 0;
@@ -47,6 +49,6 @@ main {
 .posts-container > a p {
   margin: 0.5em 0 0;
   font-size: 0.9em;
-  color: #ccc;
+  color: mocha.$text;
 }
 </style>
