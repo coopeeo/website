@@ -41,7 +41,7 @@ const nextSocial = () => {
   <div class="social-container">
     <div class="social-title">Socials</div>
     <!-- prettier-ignore -->
-    <a :href="socials[socialIndex].url" class="social-handle" :data-platform="socials[socialIndex].platform" @pointerleave="nextSocial">
+    <a target="_blank" :href="socials[socialIndex].url" class="social-handle" :data-platform="socials[socialIndex].platform" @pointerleave="nextSocial">
       <div class="social-prefix">@</div>
       coop<div class="underscore">_</div><span class="ending2">eeo</span><span class="ending">eeo</span>
       <div class="social-suffix">{{ socials[socialIndex].suffix }}<Icon :icon="socials[socialIndex].icon" /></div>
