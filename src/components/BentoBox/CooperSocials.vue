@@ -19,6 +19,9 @@ const socials = ref(<Social[]>[
   },
   { platform: 'github', icon: 'mdi-github', url: 'https://github.com/coopeeo' },
   { platform: 'steam', icon: 'mdi-steam', url: 'https://steamcommunity.com/id/coopeeo' },
+  { platform: 'youtube', icon: 'mdi-youtube', url: 'https://www.youtube.com/@coopeeo' },
+  { platform: 'instagram', icon: 'mdi-instagram', url: 'https://www.instagram.com/coopeeo/' },
+  { platform: 'twitch', icon: 'mdi-twitch', url: 'https://www.twitch.tv/coopeeo' },
 ])
 const socialIndex = ref(0)
 let socialDebounce: boolean = false
