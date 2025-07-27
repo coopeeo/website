@@ -22,7 +22,11 @@ const socials = ref(<Social[]>[
   { platform: 'youtube', icon: 'mdi-youtube', url: 'https://www.youtube.com/@coopeeo' },
   { platform: 'instagram', icon: 'mdi-instagram', url: 'https://www.instagram.com/coopeeo/' },
   { platform: 'twitch', icon: 'mdi-twitch', url: 'https://www.twitch.tv/coopeeo' },
-  { platform: 'discord', icon: 'mdi-discord', url: 'https://discord.com/users/594864203102158859' },
+  {
+    platform: 'discord',
+    icon: 'fa7-brands:discord',
+    url: 'https://discord.com/users/594864203102158859',
+  },
 ])
 const socialIndex = ref(0)
 let socialDebounce: boolean = false
@@ -45,7 +49,7 @@ const nextSocial = () => {
     <a target="_blank" :href="socials[socialIndex].url" class="social-handle" :data-platform="socials[socialIndex].platform" @pointerleave="nextSocial">
       <div class="social-prefix">@</div>
       coop<div class="underscore">_</div><span class="ending2">eeo</span><span class="ending">eeo</span>
-      <div class="social-suffix">{{ socials[socialIndex].suffix }}<Icon :icon="socials[socialIndex].icon" /></div>
+      <div class="social-suffix">{{ socials[socialIndex].suffix }}<Icon class="social-icon" :icon="socials[socialIndex].icon" /></div>
     </a>
     <div class="credits">
       Credit for the socials idea: <a target="_blank" href="https://pa.nley.contact">Panley</a>
@@ -89,6 +93,9 @@ const nextSocial = () => {
   .social-handle[data-platform='twitter']:hover > & {
     transform: translateX(calc(120px + 63px)) translateY(var(--y-offset));
   }
+  .social-handle[data-platform='discord']:hover > & {
+    transform: translateX(150px) translateY(var(--y-offset));
+  }
 }
 .underscore {
   display: inline;
@@ -124,6 +131,9 @@ const nextSocial = () => {
   .social-handle[data-platform='twitter']:hover > & {
     transform: translateX(calc(var(--x-offset) + 63px));
   }
+}
+.social-icon {
+  transform: translateY(0.5rem);
 }
 .social-handle {
   color: mocha.$text;
