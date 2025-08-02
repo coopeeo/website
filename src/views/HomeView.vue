@@ -32,7 +32,7 @@ import CooperSocials from '@/components/BentoBox/CooperSocials.vue'
     <div class="bento-item image"><CooperImageItem img="nameright" /></div>
     <div class="bento-item pronouns">
       he/they/any<br />Questioning<br />Non Binary<br />Transgender? (if you count non-binary as
-      transitioning.)
+      transitioning.)<br /> Gay, bi, pan whatever yk blah blah uwu :3
     </div>
     <div class="bento-item more-about-me">
       I have ADHD (the inattentive and hyperactive types), Autism (Not Sure, TBD when getting
