@@ -56,6 +56,7 @@ main {
   grid-template-columns: repeat(5, 20%);
   grid-template-rows: repeat(4);
   color: #fff;
+  background-image: url("https://www.womenscollegehospital.ca/wp-content/uploads/2023/06/image-1.png");
 }
 
 /* Name */
