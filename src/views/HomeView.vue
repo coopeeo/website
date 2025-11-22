@@ -23,7 +23,7 @@ import CooperSocials from '@/components/BentoBox/CooperSocials.vue'
     <div class="bento-item introduction">
       <h1 class="intro">
         Hi, I'm
-        <div class="name">Cooper</div>
+        <div class="name">August</div>
       </h1>
       <div class="tagline">
         I am your friendly person wanting to be <span>a decent developer</span>
@@ -31,8 +31,7 @@ import CooperSocials from '@/components/BentoBox/CooperSocials.vue'
     </div>
     <div class="bento-item image"><CooperImageItem img="nameright" /></div>
     <div class="bento-item pronouns">
-      he/they/any<br />Questioning<br />Non Binary<br />Transgender? (if you count non-binary as
-      transitioning.)<br /> femboy and gay pride meow :3
+      she/her<br />Formally known as Cooper<br />transfem<br />meow mrrp
     </div>
     <div class="bento-item more-about-me">
       I have ADHD (the inattentive and hyperactive types), Autism (Not Sure, TBD when getting
@@ -56,7 +55,6 @@ main {
   grid-template-columns: repeat(5, 20%);
   grid-template-rows: repeat(4);
   color: #fff;
-  background-image: url("https://www.womenscollegehospital.ca/wp-content/uploads/2023/06/image-1.png");
 }
 
 /* Name */
